@@ -1,0 +1,25 @@
+{
+  "name": "demo-odajah-erp",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Demo interaktif ODAJAH ERP (data rekaan sahaja) — portfolio MHM Web Studio",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bootstrap": "5.3.3",
+    "bootstrap-icons": "1.11.3",
+    "chart.js": "4.4.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.26.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.3.3",
+    "vite": "5.4.10"
+  },
+  "engines": { "node": ">=20" }
+}

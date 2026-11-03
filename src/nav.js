@@ -1,0 +1,81 @@
+// Menu sidebar setiap role — subset menu sebenar ODAJAH yang dimuatkan dalam demo.
+const COMMON = [
+  { section: 'Peribadi' },
+  { to: '/cuti', icon: 'bi-calendar-check', label: 'Cuti Saya' },
+  { to: '/shift', icon: 'bi-calendar-week', label: 'Apply Shift' },
+];
+
+export const NAV = {
+  admin: [
+    { to: '/dashboard', icon: 'bi-speedometer2', label: 'Dashboard' },
+    { to: '/master/summary', icon: 'bi-graph-up-arrow', label: 'Summary Prestasi Admin' },
+    { to: '/orders', icon: 'bi-cart3', label: 'Semua Order' },
+    { to: '/orders/new', icon: 'bi-plus-circle', label: 'Buat Order' },
+    { to: '/prospects', icon: 'bi-person-lines-fill', label: 'Prospect' },
+    { to: '/accounting/verify', icon: 'bi-cash-coin', label: 'Payment', badge: 'pendingPay' },
+    { to: '/logistik', icon: 'bi-truck', label: 'Logistik' },
+    { section: 'Katalog' },
+    { to: '/products', icon: 'bi-box-seam', label: 'Produk' },
+    { to: '/free-gifts', icon: 'bi-gift', label: 'Free Gift' },
+    { to: '/promo', icon: 'bi-tags', label: 'Pakej Promo' },
+    { section: 'Pentadbiran' },
+    { to: '/users', icon: 'bi-people', label: 'Pengguna' },
+    { to: '/whatsapp', icon: 'bi-whatsapp', label: 'WhatsApp Team' },
+    { to: '/hr', icon: 'bi-graph-up', label: 'HR' },
+    { to: '/hr/attendance', icon: 'bi-person-check', label: 'Kehadiran' },
+    { to: '/payroll/slips', icon: 'bi-file-earmark-text', label: 'Slip Gaji' },
+    ...COMMON,
+  ],
+  sales: [
+    { to: '/dashboard', icon: 'bi-speedometer2', label: 'Dashboard' },
+    { to: '/orders', icon: 'bi-list-ul', label: 'Order Saya' },
+    { to: '/orders/new', icon: 'bi-plus-circle', label: 'Buat Order' },
+    { to: '/orders?status=returned', icon: 'bi-arrow-return-left', label: 'Order Return' },
+    { to: '/prospects', icon: 'bi-person-lines-fill', label: 'Prospect Saya' },
+    { to: '/whatsapp', icon: 'bi-whatsapp', label: 'WhatsApp Team' },
+    { to: '/pnl', icon: 'bi-bar-chart-line', label: 'P&L Saya' },
+    { to: '/payroll/slips', icon: 'bi-file-earmark-text', label: 'Slip Gaji' },
+    ...COMMON,
+  ],
+  accounting: [
+    { to: '/dashboard', icon: 'bi-speedometer2', label: 'Dashboard' },
+    { to: '/accounting/verify', icon: 'bi-cash-coin', label: 'Verify Payment', badge: 'pendingPay' },
+    { to: '/accounting/verified', icon: 'bi-check-circle', label: 'Sudah Disahkan' },
+    { to: '/accounting/remittance', icon: 'bi-tiktok', label: 'TikTok/Shopee', badge: 'pendingRem' },
+    { to: '/accounting/cogs', icon: 'bi-tags', label: 'Kos Produk (COGS)' },
+    { to: '/payroll/slips', icon: 'bi-file-earmark-text', label: 'Slip Gaji' },
+    ...COMMON,
+  ],
+  logistik: [
+    { to: '/dashboard', icon: 'bi-speedometer2', label: 'Dashboard' },
+    { to: '/logistik/pos_pada', icon: 'bi-calendar-event', label: 'Pos Pada' },
+    { to: '/logistik/awaiting', icon: 'bi-inbox', label: 'Awaiting', badge: 'awaiting' },
+    { to: '/logistik/processing', icon: 'bi-box-seam', label: 'Processing' },
+    { to: '/logistik/on_hold', icon: 'bi-pause-circle', label: 'On Hold' },
+    { to: '/logistik/delivering', icon: 'bi-truck', label: 'Delivering' },
+    { to: '/logistik/delivered', icon: 'bi-check-circle', label: 'Delivered' },
+    { to: '/logistik/returned', icon: 'bi-arrow-return-left', label: 'Returned' },
+    { to: '/logistik/search', icon: 'bi-search', label: 'Search Order' },
+    { to: '/logistik/stock', icon: 'bi-clipboard2-data', label: 'Stock Take' },
+    { to: '/products', icon: 'bi-box-seam', label: 'Produk' },
+    { to: '/free-gifts', icon: 'bi-gift', label: 'Free Gift' },
+    ...COMMON,
+  ],
+  hr: [
+    { to: '/dashboard', icon: 'bi-speedometer2', label: 'Dashboard' },
+    { to: '/hr/performance', icon: 'bi-graph-up', label: 'Performance' },
+    { to: '/users', icon: 'bi-people', label: 'Pengguna' },
+    { to: '/hr/attendance', icon: 'bi-person-check', label: 'Semak Kehadiran' },
+    { to: '/hr/leaves', icon: 'bi-clipboard-check', label: 'Process Leaves', badge: 'pendingLeave' },
+    { to: '/hr/balances', icon: 'bi-sliders', label: 'Baki Cuti' },
+    { to: '/payroll/slips', icon: 'bi-file-earmark-person', label: 'Slip Gaji' },
+    ...COMMON,
+  ],
+  master_admin: [
+    { to: '/master/summary', icon: 'bi-graph-up-arrow', label: 'Summary Prestasi Admin' },
+  ],
+};
+
+export const EXTRA = [
+  { to: '/tentang', icon: 'bi-info-circle', label: 'Tentang Demo' },
+];
