@@ -28,20 +28,23 @@ npm run preview
 
 Node 20+.
 
-## Deploy ke Cloudflare Pages
+## Deploy ke Cloudflare (Workers static assets)
 
-Workers & Pages → Create → Pages → Connect to Git → pilih repo `demo-odajah-erp`:
+Projek ini dideploy sebagai **Cloudflare Worker dengan static assets sahaja** (tiada kod server).
+Konfigurasi dalam `wrangler.jsonc`: folder `dist`, fallback SPA (`not_found_handling: single-page-application`).
+
+Workers & Pages → Create → Import a repository → `demo-odajah-erp`:
 
 | Tetapan | Nilai |
 |---|---|
-| Framework preset | Vite |
 | Build command | `npm run build` |
-| Build output directory | `dist` |
-| Root directory | *(kosong)* |
-| Environment variable | `NODE_VERSION` = `20` |
+| Deploy command | `npx wrangler deploy` |
+| Root directory | `/` |
 
-Tiada environment variable / secret lain diperlukan. `public/_redirects` mengendalikan routing SPA,
-`public/_headers` menetapkan `noindex` dan header keselamatan asas.
+Nama Worker mesti sama dengan `name` dalam `wrangler.jsonc` (`demo-odajah-erp`). Tiada environment variable
+atau secret diperlukan. `public/_headers` menetapkan `noindex` dan header keselamatan asas.
+
+Alternatif **Cloudflare Pages**: preset Vite, build `npm run build`, output `dist` (Pages melakukan fallback SPA secara automatik).
 
 ## Struktur
 
